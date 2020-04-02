@@ -17,6 +17,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/contacto', function () {
+    return view('inicio.contacto');
+})->name('contacto');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('academia', 'AcademiaController');
+
+Route::resource('colegio', 'ColegioController');
+
+Route::resource('profesor', 'ProfesorController');
+
+Route::resource('curso', 'CursoController');
