@@ -4,20 +4,20 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Colegio extends Model
+class RegistroExamen extends Model
 {
-        /**
+    /**
      * The table associated with the model.
      *
      * @var string
      */
-    protected $table = 'colegio';
+    protected $table = 'registro_examen';
     /**
      * The primary key associated with the table.
      *
      * @var string
      */
-    protected $primaryKey = 'DNI';
+    protected $primaryKey = 'fecha';
 
     /**
      * Indicates if the IDs are auto-incrementing.
@@ -31,18 +31,5 @@ class Colegio extends Model
      *
      * @var string
      */
-    protected $keyType = 'string';
-
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $fillable = [
-        'DNI', 'ano',
-    ];
-
-    public function user() {
-        return $this->belongsTo('App\User', 'DNI');
-    }
+    protected $keyType = 'date';
 }

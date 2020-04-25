@@ -64,4 +64,17 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function colegio() {
+        return $this->hasOne('App\Colegio', 'DNI');
+    }
+
+    public function examenes() {
+        return $this->hasManyThrough(
+            'App\Examen', 
+            'App\Academia',
+            'DNI', 
+            'DNI'
+        );
+    }
 }

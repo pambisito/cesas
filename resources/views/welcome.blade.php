@@ -10,10 +10,35 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
+
+
+<!-- Latest compiled and minified CSS -->
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous" />
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css" /> -->
+
+
+
     <!-- estilo de la página -->
     <link rel="stylesheet" href="{{ asset('css/bootstrap/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+
+
+
+
+<!-- Stylesheet -->
+<!-- <link href="https://aduni.edu.pe/wp-content/themes/aduni/style.css" rel="stylesheet" />
+
+<link rel='stylesheet' id='dashicons-css'  href='https://aduni.edu.pe/wp-includes/css/dashicons.min.css?ver=4.9.13' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack-widget-social-icons-styles-css'  href='https://aduni.edu.pe/wp-content/plugins/jetpack/modules/widgets/social-icons/social-icons.css?ver=20170506' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack_css-css'  href='https://aduni.edu.pe/wp-content/plugins/jetpack/css/jetpack.css?ver=6.4.3' type='text/css' media='all' />
+<link rel="stylesheet" type="text/css" id="wp-custom-css" href="https://aduni.edu.pe/?custom-css=290e63956f" />
+
+     -->
     
+
+
+
     <!-- iconos del menú -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
@@ -68,7 +93,7 @@
                             </ul>
                         </li>
                         <li class=""><a href="#"><span class="fa fa-book" aria-hidden="true"></span> REGLAMENTO</a></li>
-                        <li class=""><a href="#"><span class="fa fa-award" aria-hidden="true"></span> CICLOS</a></li>
+                        <li class=""><a href="{{ route('ciclo1') }}"><span class="fa fa-award" aria-hidden="true"></span> CICLOS</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="fa fa-share-alt" aria-hidden="true"></span> ENLANCES EXTERNOS
                                 <b class="caret"></b>

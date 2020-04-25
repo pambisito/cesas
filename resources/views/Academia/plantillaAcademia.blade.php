@@ -20,6 +20,10 @@
 
     <script type="text/javascript" src="{{ asset('js/jquery/jquery-2.2.3.min.js') }}"></script>
     <script src="{{ asset('js/scripts.js') }}"></script>
+
+    <!-- gráfico 2D -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
 </head>
 <body class="theme-blue-gradient fixed-header pace-done">
     <div class="pace pace-inactive">
@@ -98,53 +102,23 @@
                                 <li class="dropdown">
                                     <a class="dropdown-toggle" href="#">
                                         <i class="fa fa-user"></i>
-                                        <span>Registrar persona</span>
+                                        <span>Mis notas</span>
                                         <i class="fa fa-chevron-circle-right drop-icon"></i>
                                     </a>
                                     <ul class="submenu" style="display: none;">
                                         <li>
-                                            <a href="{{ route('academia.create') }}">
+                                            <a href="{{ route('academia.reporteNotaGeneral') }}">
                                                 <i class="fa fa-user"></i>
-                                                &nbsp;&nbsp;Academia
+                                                &nbsp;&nbsp;General
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="{{ route('colegio.create') }}">
+                                            <a href="{{ route('academia.obtenerMes') }}">
                                                 <i class="fa fa-user"></i>
-                                                &nbsp;&nbsp;Colegio
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="{{ route('profesor.create') }}">
-                                                <i class="fa fa-user"></i>
-                                                &nbsp;&nbsp;Profesor
+                                                &nbsp;&nbsp;Mensual
                                             </a>
                                         </li>
                                     </ul>
-                                </li>
-                                <li>
-                                    <a href="{{ route('curso.create') }}">
-                                        <i class="fas fa-book"></i>
-                                        <span>Registar cursos</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="{{ route('asistencia.create') }}">
-                                        <i class="far fa-file-alt"></i>
-                                        <span>Tomar asistencia</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="{{ route('examen.create') }}">
-                                        <i class="fas fa-book-reader"></i>
-                                        <span>Programar Examen</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="{{ route('examen.obtenerFecha') }}">
-                                        <i clas=""></i>
-                                        <span>Ingresar notas academia</span>
-                                    </a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">

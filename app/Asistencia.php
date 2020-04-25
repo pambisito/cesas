@@ -4,14 +4,14 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Colegio extends Model
+class Asistencia extends Model
 {
-        /**
+    /**
      * The table associated with the model.
      *
      * @var string
      */
-    protected $table = 'colegio';
+    protected $table = 'asistencia';
     /**
      * The primary key associated with the table.
      *
@@ -39,10 +39,6 @@ class Colegio extends Model
      * @var array
      */
     protected $fillable = [
-        'DNI', 'ano',
+        'DNI', 'fecha', 'tipo', 'observacion',
     ];
-
-    public function user() {
-        return $this->belongsTo('App\User', 'DNI');
-    }
 }

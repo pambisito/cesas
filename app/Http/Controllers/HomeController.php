@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Academia;
 
 class HomeController extends Controller
 {
@@ -26,6 +27,12 @@ class HomeController extends Controller
     {
         if (Auth::user()->DNI == '74415678') {
             return view('DBA.homeDBA');
+        } else {
+            if (Academia::where('DNI', Auth::user()->DNI)->exists()) {
+                return view('Academia.homeAcademia');
+            } else {
+                echo "pajero";
+            }
         }
     }
 }
